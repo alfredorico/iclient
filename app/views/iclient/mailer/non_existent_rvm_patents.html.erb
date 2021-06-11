@@ -1,0 +1,21 @@
+<% if @any_patent %>
+  <p>Buen día estimados. Se remiten las patentes no existentes en RVM detectadas al momento</p>
+  <p>A continuación indicamos los padrones de las patentes</p>
+  <% @padrones.each do |h|%>
+    <p>PATENTE <strong><%= h[:patent]%></strong></p>
+    <% if h[:padron_front].present? and  h[:padron_rear] %>
+      <a href="<%= h[:padron_front]  %>">Padron Frontal</a> | <a href="<%= h[:padron_rear]  %>">Padron Reverso</a>
+    <% else %>
+      <%= "Sin fotos por el momento" %>
+    <% end %>
+    <br>
+    <hr>
+  <% end %>
+<% else %>
+  <p>Buen día estimados, al día de hoy no hay patentes no registradas en RVM</p>
+<% end %>
+<p>Saludos.</p>
+<p style="margin-top: 100px">
+  <b><i>Sistema de integración Iclient - Company.</i></b>
+</p>
+

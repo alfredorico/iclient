@@ -1,0 +1,33 @@
+
+<div>
+  <img style="max-width: 150px; height: auto; " src="https://d31dn7nfpuwjnm.cloudfront.net/images/valoraciones/0023/7648/iclient-consolidada.png" size="150x72" alt="">
+</div>
+<div>
+  <h2>Informe inspección seguro auto</h2>
+</div>
+
+<br>
+
+<p style="font-style: italic;"><%=  "#{@inspection.insured_first_name}  #{@inspection.insured_last_name} #{@inspection.insured_mother_last_name} " %> </p>
+
+<p>Adjuntamos resultado de la inspección de tu vehículo <strong><%= @inspection.vehicle_brand_description %></strong>, <strong><%= @inspection.vehicle_model_description %></strong>, patente <strong><%= @inspection.patent %></strong>, año <strong><%= @inspection.vehicle_year %></strong> , realizada el <strong><%= @inspection.inspection_date.strftime("%d/%m/%Y") %></strong> </p>
+
+<p>Resultado: <strong><%= @inspection.resolution_text  %> </strong></p>
+
+<p>Si la inspección fue aprobada, recibirás la póliza de seguros en tu correo. En caso de rechazo te recordamos que tu vehículo no está asegurado.</p>
+
+<p>Ante cualquier inquietud en relación a esta comunicación, estamos a disposición. </p>
+
+<p>Atentamente,</p>
+<p>Iclient Consolidada Seguros Generales S.A.</p>
+
+
+
+<div style="background-color: #eeece1; color: #2a569d; padding: 20px">
+  <p style="text-align: center; font-weight: bold">Este e-mail es generado de forma automática, por favor no respondas a este mensaje.</p>
+  <p>Para asegurar la entrega de nuestro e-mail en tu correo, agrega esta casilla a tu libreta de direcciones. Este es un e-mail seguro, en Iclient Consolidada jamás te pediremos tus datos personales a través del correo electrónico y siempre te alertaremos por posibles fraudes. Este mail no solicita claves o información de cuentas. Si tienes dudas, consultas o sugerencias, visítanos en www.iclient.cl o contáctate con nuestra plataforma de atención al cliente al 600 600 9090.</p>
+  <p style="text-align:center" >Este correo electrónico fue enviado por Company SPA, <strong>por instrucción de Iclient Consolidada Seguros Generales S.A.</strong></p>
+  <p style="text-align: center; font-weight: bold">Todos los derechos reservados ©<%= DateTime.now.year %></p>
+</div>
+
+
